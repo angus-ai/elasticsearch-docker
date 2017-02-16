@@ -26,10 +26,6 @@ RUN set -ex && for esdirs in config data logs; do \
     done
 
 USER elasticsearch
-
-# Install xpack
-RUN eval ${ES_JAVA_OPTS:-} elasticsearch-plugin install --batch x-pack
-
 COPY elasticsearch.yml config/
 COPY log4j2.properties config/
 COPY bin/es-docker bin/es-docker

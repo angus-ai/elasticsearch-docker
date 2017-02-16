@@ -58,7 +58,7 @@ services:
   tester:
     build:
       context: build/python
-    command: py.test -p no:cacheprovider tests/test_xpack_basic_index_crud.py
+    command: py.test -p no:cacheprovider tests/test_basic_index_crud.py
     image: "tester:latest"
     networks:
       - esnet
