@@ -13,9 +13,10 @@ ES_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/elasticsearch
 endif
 
 ELASTIC_REGISTRY=docker.elastic.co
+ANGUS_REGISTRY=index.docker.io
 BASEIMAGE=$(ELASTIC_REGISTRY)/elasticsearch/elasticsearch-alpine-base:latest
-VERSIONED_IMAGE=$(ELASTIC_REGISTRY)/elasticsearch/elasticsearch:$(IMAGETAG)
 LATEST_IMAGE=$(ELASTIC_REGISTRY)/elasticsearch/elasticsearch:latest
+VERSIONED_IMAGE=$(ANGUS_REGISTRY)/rafou/elasticsearch-docker-noxpack:$(IMAGETAG)
 
 export ELASTIC_VERSION
 export ES_DOWNLOAD_URL
